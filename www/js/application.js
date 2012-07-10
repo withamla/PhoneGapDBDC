@@ -76,7 +76,7 @@ function setupDefaultView() {
     container = $("body").find("#content");
     
     $('#login').tap(function (e) {
-        e.preventDefault();
+ //       e.preventDefault();
         sfw.login( setupHomeView );
     });
 }
