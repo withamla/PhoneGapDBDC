@@ -161,3 +161,5 @@ pip-log.txt
 
 # Mac crap
 .DS_Store
+
+/www/cordova-1.9.0.js
