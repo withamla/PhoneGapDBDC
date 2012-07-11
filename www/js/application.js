@@ -33,7 +33,7 @@ var currentLead;
 
 function onDeviceReady( event ) {
     console.log("deviceready");
-    alert("Device ready");
+//    alert("Device ready");
     //initialize salesforce wrapper
     sfw = new SalesforceWrapper();
     
@@ -52,7 +52,7 @@ function onDeviceReady( event ) {
              }
          })();
     }
-    alert("Mousetache templates loaded")
+ //   alert("Mousetache templates loaded")
 }
 
 function onTemplateLoaded(template, key) {
@@ -77,8 +77,9 @@ function setupDefaultView() {
     container = $("body").find("#content");
     
     $('#login').tap(function (e) {
- //       e.preventDefault();
+       e.preventDefault();
         sfw.login( setupHomeView );
+        alert("login");
     });
 }
 
