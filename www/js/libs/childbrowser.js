@@ -23,6 +23,7 @@ ChildBrowser.LOCATION_CHANGED_EVENT = 1;
  * @param options       An object that specifies additional options
  */
 ChildBrowser.prototype.showWebPage = function(url, options) {
+    alert("in show web page");
     if (options === null || options === "undefined") {
         var options = new Object();
         options.showLocationBar = true;

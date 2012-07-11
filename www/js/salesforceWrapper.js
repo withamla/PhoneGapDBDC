@@ -13,6 +13,7 @@ function SalesforceWrapper() {
 }
 
 SalesforceWrapper.prototype.init = function() {
+    alert("in init");
     this.client = new forcetk.Client(this.clientId, this.loginUrl);
     this.cb = window.plugins.childBrowser;
 }
@@ -23,6 +24,7 @@ SalesforceWrapper.prototype.login = function (successCallback) {
     var self = this;
     self.cb.onLocationChange = function (loc) {
         if (loc.search(self.redirectUri) >= 0) {
+            alert("before cb close");
             self.cb.close();
             self.sessionCallback(unescape(loc));
         }
