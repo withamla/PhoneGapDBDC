@@ -22,16 +22,16 @@
 */
 
 ;(function() {
-alert("inside cord 1");
+//alert("inside cord 1");
 // file: lib/scripts/require.js
 var require,
     define;
 
 (function () {
     var modules = {};
-alert("inside cord 2");
+//alert("inside cord 2");
     function build(module) {
-        alert("inside cord 3");
+       // alert("inside cord 3");
         var factory = module.factory;
         module.exports = {};
         delete module.factory;
@@ -76,7 +76,7 @@ var channel = require('cordova/channel');
  * Listen for DOMContentLoaded and notify our channel subscribers.
  */
 document.addEventListener('DOMContentLoaded', function() {
-    alert("inside cord 4");
+ //   alert("inside cord 4");
     channel.onDOMContentLoaded.fire();
 }, false);
 if (document.readyState == 'complete' || document.readyState == 'interactive') {
@@ -99,7 +99,7 @@ var documentEventHandlers = {},
     windowEventHandlers = {};
 
 document.addEventListener = function(evt, handler, capture) {
-    alert("inside cord 5");
+ //   alert("inside cord 5");
     var e = evt.toLowerCase();
     if (typeof documentEventHandlers[e] != 'undefined') {
         if (evt === 'deviceready') {
@@ -113,7 +113,7 @@ document.addEventListener = function(evt, handler, capture) {
 };
 
 window.addEventListener = function(evt, handler, capture) {
-    alert("inside cord 6");
+  //  alert("inside cord 6");
     var e = evt.toLowerCase();
     if (typeof windowEventHandlers[e] != 'undefined') {
         windowEventHandlers[e].subscribe(handler);
@@ -143,7 +143,7 @@ window.removeEventListener = function(evt, handler, capture) {
 };
 
 function createEvent(type, data) {
-    alert("inside cord 7");
+ //   alert("inside cord 7");
     var event = document.createEvent('Events');
     event.initEvent(type, false, false);
     if (data) {
