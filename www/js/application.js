@@ -33,7 +33,7 @@ var currentLead;
 
 function onDeviceReady( event ) {
     console.log("deviceready");
-    
+    alert("Device ready");
     //initialize salesforce wrapper
     sfw = new SalesforceWrapper();
     
@@ -52,6 +52,7 @@ function onDeviceReady( event ) {
              }
          })();
     }
+    alert("Mousetache templates loaded")
 }
 
 function onTemplateLoaded(template, key) {
