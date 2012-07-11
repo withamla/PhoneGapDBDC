@@ -25,6 +25,7 @@ SalesforceWrapper.prototype.login = function (successCallback) {
     this.loginSuccess = successCallback;
     var self = this;
     self.cb.onLocationChange = function (loc) {
+        alert("inside self.onlocationChange");
         if (loc.search(self.redirectUri) >= 0) {
             alert("before cb close");
             self.cb.close();

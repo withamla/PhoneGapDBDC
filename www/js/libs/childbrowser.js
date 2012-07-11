@@ -10,6 +10,7 @@
  * Constructor
  */
 function ChildBrowser() {
+    alert("inside cb constructor");
 };
 
 ChildBrowser.CLOSE_EVENT = 0;
@@ -46,6 +47,7 @@ ChildBrowser.prototype.close = function() {
  * @param usecordova   Load url in cordova webview [optional]
  */
 ChildBrowser.prototype.openExternal = function(url, usecordova) {
+    alert("inside openExternal");
     if (usecordova === true) {
         navigator.app.loadUrl(url);
     }
@@ -71,6 +73,7 @@ ChildBrowser.prototype._onEvent = function(data) {
  * Method called when the child browser has an error.
  */
 ChildBrowser.prototype._onError = function(data) {
+    alert("inside cb onError");
     if (typeof window.plugins.childBrowser.onError === "function") {
         window.plugins.childBrowser.onError(data);
     }
@@ -80,6 +83,7 @@ ChildBrowser.prototype._onError = function(data) {
  * Maintain API consistency with iOS
  */
 ChildBrowser.install = function(){
+    alert("inside cb install");
     return window.plugins.childBrowser;
 };
 
@@ -87,5 +91,6 @@ ChildBrowser.install = function(){
  * Load ChildBrowser
  */
 cordova.addConstructor(function() {
+    alert("inside cb addConstructor");
     cordova.addPlugin("childBrowser", new ChildBrowser());
 });

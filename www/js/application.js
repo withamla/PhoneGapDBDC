@@ -81,7 +81,7 @@ function setupDefaultView() {
        e.preventDefault();
        alert("before login");
         sfw.login( setupHomeView );
-        alert("login");
+        alert("afterlogin");
     });
 }
 
