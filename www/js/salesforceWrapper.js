@@ -18,6 +18,7 @@ SalesforceWrapper.prototype.init = function() {
 }
 
 SalesforceWrapper.prototype.login = function (successCallback) {
+    alert("in sfw login");
     this.loginSuccess = successCallback;
     var self = this;
     self.cb.onLocationChange = function (loc) {

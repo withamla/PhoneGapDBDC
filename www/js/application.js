@@ -77,7 +77,9 @@ function setupDefaultView() {
     container = $("body").find("#content");
     
     $('#login').tap(function (e) {
+        alert("before e prevent");
        e.preventDefault();
+       alert("before login");
         sfw.login( setupHomeView );
         alert("login");
     });
