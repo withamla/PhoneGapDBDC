@@ -77,7 +77,7 @@ function setupDefaultView() {
     container = $("body").find("#content");
     
     $('#login').tap(function (e) {
-        alert("before e prevent");
+        //alert("before e prevent");
        e.preventDefault();
        alert("before login");
         sfw.login( setupHomeView );
@@ -97,7 +97,7 @@ function resetContainer() {
  *  **************************************************/
 
 function setupHomeView() {
-    alert("inside setupHomeView");
+   // alert("inside setupHomeView");
     resetContainer();
     container.html( templates.home );
     header.html( "Welcome" );
@@ -180,13 +180,13 @@ function saveFormData( event ) {
 }
 
 function saveDataSuccess( result ) {
-    alert("Data Saved");
+    //alert("Data Saved");
     navigateBackFromFormView();
 }
 
 function saveDataError( request, status, error){ 
     console.log( request.responseText ); 
-    alert( request.responseText );
+    //alert( request.responseText );
 }
 
 function navigateBackFromFormView( event ) {

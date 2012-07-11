@@ -4,8 +4,8 @@ function SalesforceWrapper() {
     /* AUTHENTICATION PARAMETERS */
     this.loginUrl = 'https://login.salesforce.com/';
     this.clientId = '3MVG9QDx8IX8nP5SxUNC2EJur7OK.mHSJWbkjO4YF79YA_pl70sIoeDgQp_tSIs5v10hLaZTxwZWQpo4WU6xu';
-   // this.redirectUri = 'https://login.salesforce.com/services/oauth2/success';
-    this.redirectUri = 'sfdc://success';
+    this.redirectUri = 'https://login.salesforce.com/services/oauth2/success';
+   // this.redirectUri = 'sfdc://success';
     
     /* CLASS VARIABLES */
     this.cb = undefined;     //ChildBrowser in PhoneGap
