@@ -23,7 +23,9 @@ SalesforceWrapper.prototype.init = function() {
 SalesforceWrapper.prototype.login = function (successCallback) {
     alert("in sfw login");
     this.loginSuccess = successCallback;
+    alert("in sfw login 2");
     var self = this;
+    alert("in sfw login 3");
     self.cb.onLocationChange = function (loc) {
         alert("inside self.onlocationChange");
         if (loc.search(self.redirectUri) >= 0) {
@@ -32,7 +34,10 @@ SalesforceWrapper.prototype.login = function (successCallback) {
             self.sessionCallback(unescape(loc));
         }
     };
+    alert("in sfw login 4");
+  
     self.cb.showWebPage(self.getAuthorizeUrl(self.loginUrl, self.clientId, self.redirectUri));
+    alert("in sfw login 5");
 }
 
 SalesforceWrapper.prototype.getAuthorizeUrl = function (loginUrl, clientId, redirectUri) {
