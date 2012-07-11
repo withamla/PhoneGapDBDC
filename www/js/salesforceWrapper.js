@@ -1,9 +1,11 @@
 
 function SalesforceWrapper() {
+    alert("inside wrapper");
     /* AUTHENTICATION PARAMETERS */
     this.loginUrl = 'https://login.salesforce.com/';
-    this.clientId = '3MVG9QDx8IX8nP5SxUNC2EJur7MPbOHXHMO.6JLv0IlqXTKSghGTiWdPxDS6DVIUS5snHZOUpZUTalgV.tpIq';
-    this.redirectUri = 'https://login.salesforce.com/services/oauth2/success';
+    this.clientId = '3MVG9QDx8IX8nP5SxUNC2EJur7OK.mHSJWbkjO4YF79YA_pl70sIoeDgQp_tSIs5v10hLaZTxwZWQpo4WU6xu';
+   // this.redirectUri = 'https://login.salesforce.com/services/oauth2/success';
+    this.redirectUri = 'sfdc://success';
     
     /* CLASS VARIABLES */
     this.cb = undefined;     //ChildBrowser in PhoneGap
@@ -33,11 +35,12 @@ SalesforceWrapper.prototype.login = function (successCallback) {
 }
 
 SalesforceWrapper.prototype.getAuthorizeUrl = function (loginUrl, clientId, redirectUri) {
+    alert("inside getAutorhizeUrl");
     return loginUrl + 'services/oauth2/authorize?display=touch' + '&response_type=token&client_id=' + escape(clientId) + '&redirect_uri=' + escape(redirectUri);
 }
 
 SalesforceWrapper.prototype.sessionCallback = function(loc) {    var oauthResponse = {};
-    
+    alert("inside sessionCallback");
     var fragment = loc.split("#")[1];
     
     if (fragment) {
