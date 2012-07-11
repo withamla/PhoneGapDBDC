@@ -26,15 +26,15 @@ SalesforceWrapper.prototype.login = function (successCallback) {
     alert("in sfw login 2");
     var self = this;
     alert("in sfw login 3");
-    //
-    //self.cb.onLocationChange = function (loc) {
-    //    alert("inside self.onlocationChange");
-    //    if (loc.search(self.redirectUri) >= 0) {
-    //        alert("before cb close");
-    //        self.cb.close();
-    //        self.sessionCallback(unescape(loc));
-    //    }
-    //};
+    
+    self.cb.onLocationChange = function (loc) {
+        alert("inside self.onlocationChange");
+        if (loc.search(self.redirectUri) >= 0) {
+            alert("before cb close");
+            self.cb.close();
+            self.sessionCallback(unescape(loc));
+        }
+    };
   
     alert("in sfw login 4");
   
