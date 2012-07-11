@@ -58,6 +58,7 @@ ChildBrowser.prototype.openExternal = function(url, usecordova) {
  * Method called when the child browser has an event.
  */
 ChildBrowser.prototype._onEvent = function(data) {
+    alert("inside cb onEvent");
     if (data.type == ChildBrowser.CLOSE_EVENT && typeof window.plugins.childBrowser.onClose === "function") {
         window.plugins.childBrowser.onClose();
     }

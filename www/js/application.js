@@ -97,6 +97,7 @@ function resetContainer() {
  *  **************************************************/
 
 function setupHomeView() {
+    alert("inside setupHomeView");
     resetContainer();
     container.html( templates.home );
     header.html( "Welcome" );
