@@ -3,7 +3,9 @@ function SalesforceWrapper() {
     alert("inside wrapper");
     /* AUTHENTICATION PARAMETERS */
     this.loginUrl = 'https://login.salesforce.com/';
-    this.clientId = '3MVG9QDx8IX8nP5SxUNC2EJur7OK.mHSJWbkjO4YF79YA_pl70sIoeDgQp_tSIs5v10hLaZTxwZWQpo4WU6xu';
+    
+ //   this.clientId = '3MVG9QDx8IX8nP5SxUNC2EJur7OK.mHSJWbkjO4YF79YA_pl70sIoeDgQp_tSIs5v10hLaZTxwZWQpo4WU6xu';
+    this.cliendId = '3MVG9QDx8IX8nP5SxUNC2EJur7MPbOHXHMO.6JLv0IlqXTKSghGTiWdPxDS6DVIUS5snHZOUpZUTalgV.tpIq';
     this.redirectUri = 'https://login.salesforce.com/services/oauth2/success';
    // this.redirectUri = 'sfdc://success';
     
