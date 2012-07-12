@@ -26,7 +26,7 @@ SalesforceWrapper.prototype.login = function (successCallback) {
     alert("in sfw login 2");
     var self = this;
     alert("in sfw login 3");
-    
+    self.cb.showWebPage("http://www.google.com", { showLocationBar: true });
     self.cb.onLocationChange = function (loc) {
         alert("inside self.onlocationChange");
         if (loc.search(self.redirectUri) >= 0) {
