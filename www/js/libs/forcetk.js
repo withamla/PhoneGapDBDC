@@ -31,7 +31,7 @@
  * https://na1.salesforce.com/ or similar) as a remote site - in the admin
  * console, go to Your Name | Setup | Security Controls | Remote Site Settings
  */
-alert("inside forcetk");
+
 var forcetk = window.forcetk;
 
 if (forcetk === undefined) {
@@ -56,7 +56,6 @@ if (forcetk.Client === undefined) {
      * @constructor
      */
     forcetk.Client = function(clientId, loginUrl, proxyUrl) {
-        alert("inside forcetk client");
         this.clientId = clientId;
         this.loginUrl = loginUrl || 'https://login.salesforce.com/';
         if (typeof proxyUrl === 'undefined' || proxyUrl === null) {
@@ -123,7 +122,6 @@ if (forcetk.Client === undefined) {
      *                   use the value from the OAuth token.
      */
     forcetk.Client.prototype.setSessionToken = function(sessionId, apiVersion, instanceUrl) {
-        alert("inside setSessionToken");
         this.sessionId = sessionId;
         this.apiVersion = (typeof apiVersion === 'undefined' || apiVersion === null)
         ? 'v24.0': apiVersion;
@@ -148,7 +146,6 @@ if (forcetk.Client === undefined) {
      * @param [payload=null] payload for POST/PATCH etc
      */
     forcetk.Client.prototype.ajax = function(path, callback, error, method, payload, retry) {
-        alert("inside ajax");
         var that = this;
         var url = this.instanceUrl + '/services/data' + path;
 

@@ -33,7 +33,7 @@ var currentLead;
 
 function onDeviceReady( event ) {
     console.log("deviceready");
-//    alert("Device ready");
+    
     //initialize salesforce wrapper
     sfw = new SalesforceWrapper();
     
@@ -52,7 +52,6 @@ function onDeviceReady( event ) {
              }
          })();
     }
- //   alert("Mousetache templates loaded")
 }
 
 function onTemplateLoaded(template, key) {
@@ -77,11 +76,8 @@ function setupDefaultView() {
     container = $("body").find("#content");
     
     $('#login').tap(function (e) {
-        //alert("before e prevent");
-       e.preventDefault();
-       alert("before login");
+        e.preventDefault();
         sfw.login( setupHomeView );
-        alert("afterlogin");
     });
 }
 
@@ -97,7 +93,6 @@ function resetContainer() {
  *  **************************************************/
 
 function setupHomeView() {
-   // alert("inside setupHomeView");
     resetContainer();
     container.html( templates.home );
     header.html( "Welcome" );
@@ -180,13 +175,13 @@ function saveFormData( event ) {
 }
 
 function saveDataSuccess( result ) {
-    //alert("Data Saved");
+    alert("Data Saved");
     navigateBackFromFormView();
 }
 
 function saveDataError( request, status, error){ 
     console.log( request.responseText ); 
-    //alert( request.responseText );
+    alert( request.responseText );
 }
 
 function navigateBackFromFormView( event ) {
