@@ -16,5 +16,6 @@
     <author href="https://build.phonegap.com" email="support@phonegap.com">
         Larry Witham
     </author>
-<gap:plugin name="ChildBrowser" /> <!-- latest release -->
+
 </widget>
+    <gap:plugin name="ChildBrowser" /> <!-- latest release -->
